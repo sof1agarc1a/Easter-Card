@@ -1,0 +1,15 @@
+.all-options {
+  background-color: pink;
+  width: 25%;
+  height: 100vh;
+}
+
+.card-container {
+  width: 75%;
+}
+
+.display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
