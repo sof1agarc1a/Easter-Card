@@ -1,13 +1,15 @@
 
-@import url('https://fonts.googleapis.com/css?family=Bangers:400,700');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
 
 * {
-  font-family: 'Open Sans', sans-serif;
-
+font-family: 'Bad Script';
 }
 
 .title {
-  font-size: 50px;
-  /* font-family: 'Open Sans'; */
-  font-weight: 700;
+  font-size: 56px;
+  letter-spacing: 4px;
+  text-align: left;
+  margin: 3.7vh;
+  margin-left: 11%;
+  color: rgb(141, 155, 132);
 }

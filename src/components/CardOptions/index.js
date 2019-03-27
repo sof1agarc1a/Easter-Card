@@ -24,28 +24,18 @@ class CardOptions extends Component {
       render() {
         return(
           <div>
-          <ChromePicker
-          disableAlpha
-          color={ this.state.color }
-          onChangeComplete={ this.changeColor }/>
-          <CirclePicker
-          color={ this.state.color }
-          onChangeComplete={ this.changeColor }/>
-
-            <p style={{color: this.state.color }}> TEXTT </p>
-            <p> Font Color: </p>
-
-
+            <p className="fontoption-text"> Change Font Color </p>
+            <ChromePicker disableAlpha color={this.state.color} onChangeComplete={this.changeColor}/>
+            <p className="fontoption-text"> Color Options </p>
+            <CirclePicker color={this.state.color} onChangeComplete={this.changeColor}/>
              <div className="text-input">
                <form>
-                 <input style={{color: this.state.color }}
-                  type="text" placeholder="write something like Hepi Easter..." />
+                 <input style={{color: this.state.color}} type="text" placeholder="Write something here..." />
                </form>
              </div>
-
           </div>
-          )
-        }
+        )
       }
+    }
 
 export default CardOptions;

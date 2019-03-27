@@ -7,12 +7,9 @@ import './CardContainer.css';
 
 
 class CardContainer extends Component {
-
-  constructor() {
-    super()
-    this.state = {
-      card: []
-    }
+  state = {
+    card: "",
+    url: ""
   }
 
   componentDidMount(){
@@ -20,32 +17,28 @@ class CardContainer extends Component {
   }
 
   fetchProduct = () => {
-    fetch("https://picsum.photos/list/")
+    fetch("https://api.unsplash.com/photos/random?query=easter&client_id=f761c684394c261b59f294b58c4835348c6045d3c027d917f7eda1625a4ba720")
       .then(response => response.json())
       .then(response => {
-        console.log(response[0])
       this.setState({
-        card: response[0]
+        card: response,
+        url: response.urls.regular
       })
     })
   }
 
   render(props) {
-
     return (
       <div className="display">
         <div className="all-options">
           <CardOptions />
+          <p className="fontoption-text"> Ugly Pic? Np </p>
           <Button change={this.fetchProduct}/>
         </div>
+
         <div className="card-container">
-          {/**<CardImage img={this.state.card} src={this.state.card} />*/}
-
-          <div className="card-align">
-            <Title text={"CREATE YOUR EASTER-CARD B)"} />
-            <img className="card-image" src="https://i.ytimg.com/vi/PM9_rjuvfwM/maxresdefault.jpg" alt="hej" />
-          </div>
-
+          <Title text={"Create Your EASTER Card B)"} />
+          <CardImage url={this.state.url} description={this.state.card}/>
         </div>
       </div>
     );

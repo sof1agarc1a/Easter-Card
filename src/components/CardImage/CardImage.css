@@ -1,9 +1,7 @@
 .card-image {
-  width: 1000px;
-  height: 600px;
-  padding: 20px;
-}
-
-.card-align {
-  text-align: center;
+  width: 64%;
+  height: 63vh;
+  padding: 2vh;
+  margin-left: 5.5%;
+  transform: rotate(1deg);
 }
